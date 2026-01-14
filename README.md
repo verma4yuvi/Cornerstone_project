@@ -48,7 +48,7 @@ backend/
 
 ### 🚀 System Architecture & Flow
 The following diagram represents the end-to-end data flow when a user interacts with the platform:
-```code snippet
+```mermaid
 graph TD
     A[User Selects Video] --> B[React: POST Request]
     B --> C[Django: Save Video to Media]
@@ -56,4 +56,48 @@ graph TD
     D --> E[Django: Save Results to DB]
     E --> F[API: Return JSON Response]
     F --> G[React: Update UI & Display Results]
+```
+
+## ✨ Key Features
+
+- **Real-time Video Upload:** Drag-and-drop interface for seamless video submission.
+- **AI-Powered Analysis:** Backend integration with Machine Learning models for content moderation.
+- **Detailed Reporting:** Visual breakdown of moderation results (JSON to UI mapping).
+- **Responsive Design:** Fully optimized for mobile and desktop using Tailwind CSS v4.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+* **Node.js** (v18 or higher)
+* **Python** (v3.9 or higher)
+
+### 1. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 2. Backend Setup
+```bash
+# Navigate to the backend folder
+cd backend
+
+# Create a virtual environment
+python -m venv venv
+
+# Activate the environment:
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+
+# Install requirements
+pip install -r requirements.txt
+
+# Run migrations and start server
+python manage.py migrate
+python manage.py runserver
 ```
