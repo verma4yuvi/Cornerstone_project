@@ -48,7 +48,7 @@ backend/
 
 ### 🚀 System Architecture & Flow
 The following diagram represents the end-to-end data flow when a user interacts with the platform:
-```text
+```code snippet
 graph TD
     A[User Selects Video] --> B[React: POST Request]
     B --> C[Django: Save Video to Media]
